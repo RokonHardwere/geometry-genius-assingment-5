@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500&family=Work+Sans:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="mx-3">
+    <header class="bg-cyan-200 p-2  mt-2.5 w-full ">
+       <div class="flex justify-between items-center">
+        <div class="ml-5">
+            <h1 class="font-bold text-4xl">Interactive <br> <span class="font-normal text-lg">Geometry Genius</span></h1>
+        </div>
+        <div class="mr-5">
+            <button id="btn-blog" class="px-9 py-2.5 bg-blue-600 rounded-lg">Blog</button>
+        </div>
+       </div>
+    </header>
+    <section class="mt-12 ">
+        <div class="grid lg:grid-cols-4 gap-7 grid-cols-1">
+            <!-- Triangle----------------------->
+            <div id="tri-color" class="text-center justify-self-center p-2 border border-black-700 rounded-lg">
+                <img class="mx-auto" src="images/triangle.png" alt="">
+                <h1 class="my-2">Triangle</h1>
+                <h2 class="text-slate-700">Area (A) =0.5 X <span id="tr-ab">b</span> X <span id="tr-ah">h</span></h2>
+                <label for=""><input id="tr-b" class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700" type="text" placeholder="b">cm</label><label for=""><input id="tr-h" class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700"  type="text" placeholder="h">cm</label><br>
+                <button id="btn-tr-calculator" class="px-32 py-4 bg-blue-600 rounded-lg text-white my-2">Calculator</button>
+            </div>
+            <!-- Rectange ------------------>
+            <div class="text-center justify-self-center p-2 border border-black-700 rounded-lg">
+                    <img class="mx-auto" src="images/rectangle.png" alt="">
+                    <h1 class="my-2">Rectangle</h1>
+                    <h2 class="text-slate-700">Area (A) = <span id="rac-ab">W</span> X <span id="rac-ah">I</span></h2>
+                    <label for=""><input id="rac-b" class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700" type="text" placeholder="W">cm</label><label for=""><input id="rac-h" class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700"  type="text" placeholder="I">cm</label><br>
+                    <button id="btn-rac-calculator" class="px-32 py-4 bg-blue-600 rounded-lg text-white my-2">Calculator</button>
+            </div>
+            <!-- Parallelogram ----------------->
+            <div class="text-center justify-self-center p-2 border border-black-700 rounded-lg">
+                <img class="mx-auto" src="images/parallelogram.png" alt="">
+                <h1 class="my-4">Parallelogram</h1>
+                <h2 class="text-slate-700">Area (A) = b X h</h2>
+                <label for=""><input class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700" type="text" placeholder="b">cm</label><label for=""><input class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700"  type="text" placeholder="h">cm</label><br>
+                <button class="px-32 py-4 bg-blue-600 rounded-lg text-white my-2">Calculator</button>
+             </div>
+             <!-- Rhombus ----------------------->
+             <div class="text-center justify-self-center p-2 border border-black-700 rounded-lg lg:order-1">
+                 <img class="mx-auto" src="images/rhombus.png" alt="">
+                <h1 class="my-2">Rhombus</h1>
+                <h2 class="text-slate-700">Area (A) = 0.5 X d<sub>1</sub> x d<sub>2</sub></h2>
+                <label for=""><input class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700" type="text" placeholder="d1">cm</label><label for=""><input class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700"  type="text" placeholder="d2">cm</label><br>
+                <button class="px-32 py-4 bg-blue-600 rounded-lg text-white my-2">Calculator</button>
+             </div>
+             <!-- Pentagon --------------------->
+            <div class="text-center justify-self-center p-2 border border-black-700 rounded-lg lg:order-2">
+                <img class="mx-auto" src="images/pentagon.png" alt="">
+                <h1 class="my-2">Pentagon</h1>
+                <h2 class="text-slate-700">Area (A) =0.5 x p x b</h2>
+                <label for=""><input class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700" type="text" placeholder="p">cm</label><label for=""><input class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700"  type="text" placeholder="b">cm</label><br>
+                <button class="px-32 py-4 bg-blue-600 rounded-lg text-white my-2">Calculator</button>
+             </div>
+             <!--  Ellipse--------------------->
+             <div class=" text-center justify-self-center p-2 border border-black-700 rounded-lg lg:order-3">
+                 <img class="mx-auto" src="images/ellipse.png" alt="">
+                 <h1 class="my-3">Ellipse</h1>
+                 <h2 class="text-slate-700">Area (A) = πx<span id="ell-ab">a</span>x<span id="ell-ah">b</span></h2>
+                 <label for=""><input id="ell-b" class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700" type="text" placeholder="a">cm</label><label for=""><input id="ell-h" class="w-32 h-9 bg-slate-200 px-2 placeholder:text-slate-700"  type="text" placeholder="b">cm</label><br>
+                <button id="btn-ell-calculator" class="px-32 py-4 bg-blue-600 rounded-lg text-white my-2">Calculator</button>
+            </div>
+            <!-- Area Calculation--------------->
+           <div  class="p-2 border border-black-700 rounded-lg">
+               <h1 class="my-2 text-center justify-self-center underline text-2xl font-semibold">Area Calculation</h1>
+               <ul id="main-calculation-container" class="flex flex-col justify-around items-center mt-2">
+                
+               </ul>
+           </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
